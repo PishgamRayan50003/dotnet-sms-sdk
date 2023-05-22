@@ -5,16 +5,25 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<Title>پکیج وب سرویس پیشگام رایان</Title>
-		<Version>1.1.2</Version>
-		<Company>پیشگام رایان</Company>
+		<Company>Pishgam Rayan</Company>
+		<Authors>Pishgam Rayan Development Team</Authors>
+		<Owner>Pishgam Rayan</Owner>
 		<IsPackable>true</IsPackable>
 		<OutputType>Library</OutputType>
+		<Description>SDK for Pishgam Rayan sms service to use in .NET projects </Description>
+		<RepositoryType>github</RepositoryType>
+		<RepositoryUrl>https://github.com/PishgamRayan50003/dotnet-sms-sdk</RepositoryUrl>
+		<PackageIcon>Logo.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Include="../Logo.png" Pack="true" PackagePath="" />
+		<None Include="../README.md" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="RestSharp" Version="110.2.0" />
-		<None Include="README.md" Pack="true" PackagePath="\"/>
 	</ItemGroup>
 
 </Project>
