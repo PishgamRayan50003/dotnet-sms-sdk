@@ -7,15 +7,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{5B17
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NugetSource", "NugetSource", "{885396B9-F0F6-4DF6-804E-5C4BA189A540}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{82B3075A-CC9A-4F22-B321-F30BA9CFCD65}"
-	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
-		README.md = README.md
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PishgamRayan.Sms.Sdk.Example", "PishgamRayan.Sms.Sdk.Example\PishgamRayan.Sms.Sdk.Example.csproj", "{6D68CDCA-EEB6-440A-98A7-1341994F0796}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PishgamRayan.Sms.Sdk", "PishgamRayan.Sms.Sdk\PishgamRayan.Sms.Sdk.csproj", "{1E772FC3-88F0-4970-BA51-D63ADE25C53E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ED6288BC-286C-46F6-8B96-25CF95733874}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
