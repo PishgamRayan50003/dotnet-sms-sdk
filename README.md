@@ -6,7 +6,7 @@
 ## To use this API you need to have an account on <a href="https://sms2.pishgamrayan.com">Pishgam Rayan Sms Panel</a>
 
 <p>
-After that you just need to create an api token based on your IP address from <a href="#">create token section</a> .
+After that you just need to create an api token based on your IP address from <a href="https://sms2.pishgamrayan.com/">create token section</a> .
 </p>
 
 ## Installation
