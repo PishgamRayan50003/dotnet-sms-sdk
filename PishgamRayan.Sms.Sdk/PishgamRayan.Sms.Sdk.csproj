@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
+		<TargetFrameworks>net7.0;net48</TargetFrameworks>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>disable</Nullable>
 		<Title>پکیج وب سرویس پیشگام رایان</Title>
 		<Company>Pishgam Rayan</Company>
 		<Authors>Pishgam Rayan Development Team</Authors>

@@ -75,6 +75,7 @@ Console.WriteLine($"Sending voice otp response is : {JsonSerializer.Serialize(se
 Console.WriteLine("Press enter to go next api....");
 Console.ReadLine();
 
+#if net7
 //آپلود فایل صوتی جدید
 Console.WriteLine("Uploading voice message, please wait ....");
 var bytes = await File.ReadAllBytesAsync("C:\\Voice.mp3");
@@ -91,6 +92,7 @@ Console.WriteLine($"Uploading voice message response is : {JsonSerializer.Serial
 Console.WriteLine("Press enter to go next api....");
 Console.ReadLine();
 
+#endif
 //بررسی وضعیت فایل آپلود شده
 Console.WriteLine("Get voice status, please wait ....");
 GetVoiceStatusResponse getVoiceStatusResponse = await Pishgam.GetVoiceStatus(new GetVoiceStatusRequest

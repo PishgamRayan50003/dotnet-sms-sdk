@@ -1,17 +1,20 @@
-﻿namespace PishgamRayan.Sms.Sdk.Models.GetDelivery;
+﻿using System.Collections.Generic;
 
-public class GetDeliveryRequest
+namespace PishgamRayan.Sms.Sdk.Models.GetDelivery
 {
-    /// <summary>
-    /// توکن تایید شده
-    /// </summary>
-    public string Token { get; set; } = null!;
-    /// <summary>
-    /// شناسه صف یا صندوق
-    /// </summary>
-    public int MessageId { get; set; }
-    /// <summary>
-    /// آرایه ای ازرشته های گیرندگان حداکثر 100 عدد 
-    /// </summary>
-    public List<string> RecipientNumbers { get; set; } = null!;
+    public class GetDeliveryRequest
+    {
+        /// <summary>
+        /// توکن تایید شده
+        /// </summary>
+        public string Token { get; set; }
+        /// <summary>
+        /// شناسه صف یا صندوق
+        /// </summary>
+        public int MessageId { get; set; }
+        /// <summary>
+        /// آرایه ای ازرشته های گیرندگان حداکثر 100 عدد 
+        /// </summary>
+        public List<string> RecipientNumbers { get; set; }
+    }
 }
