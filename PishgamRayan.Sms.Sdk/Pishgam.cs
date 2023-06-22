@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
-#if net7
+#if NET7_0
 using System.Net.Http.Json;
 #endif
 using System.Text.Json;
@@ -155,7 +155,7 @@ namespace PishgamRayan.Sms.Sdk
 
             return new SendVoiceOtpResponse { StatusCode = ApiStatusCode.Failed };
         }
-#if net7
+#if NET7_0
         /// <summary>
         /// میتوان به صورت byte صدای جدید آپلود کرد
         /// </summary>
