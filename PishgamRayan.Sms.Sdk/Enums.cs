@@ -4,13 +4,13 @@ namespace PishgamRayan.Sms.Sdk
 {
     public enum ApiStatusCode : byte
     {
-        [Description("موفقیت آمیز")] 
+        [Description("موفقیت آمیز")]
         Successful,
         [Description("ارسال تکی انجام شده است")]
         SingleSent,
         [Description("ارسال نظیر به نظیر انجام شده است")]
         P2PSent,
-        [Description("عدم شکست")] 
+        [Description("عدم شکست")]
         NotFailure,
         [Description("تعداد گیرندگان با تعداد پیامک همخوانی ندارد")]
         MessageBodiesNotEqualToRecipientNumbers,
@@ -20,108 +20,94 @@ namespace PishgamRayan.Sms.Sdk
         LinkIsNotAllowed,
         [Description("لیست گیرندگان خالی است")]
         RecipientsIsEmpty,
-        [Description("سازمان پیدا نشد")] OrganizationNotFound,
-        [Description("سازمان غیر فعال است")] OrganizationIsInactive,
-        [Description("سازمان منقضی شده است")] OrganizationIsExpired,
-
-        [Description("سازمان جاری یا یکی از سازمان های پدر غیرفعال است")]
+        [Description("سازمان یافت نشد یا غیر فعال است یا احراز هویت نشده یا ارسال آن غیر فعال است")]
+        OrganizationNotFound,
+        [Description("سازمان غیر فعال است")]
+        OrganizationIsInactive,
+        [Description("سازمان منقضی شده است")]
+        OrganizationIsExpired,
+        [Description("سازمان جاری یا یکی از سازمان های پدر غیرفعال است یا احراز هویت نشده یا ارسال آن ها غیر فعال است")]
         OrganizationOrHierarchyIsInactive,
-
         [Description("زمان ارسال خارج از بازه مجاز سازمان می باشد")]
         OrganizationSendTimeNotValid,
-
         [Description("ارسال کاربر غیر فعال است")]
         UserSendInactive,
-        [Description("کاربر منقضی شده است")] UserIsExpired,
-
-        [Description("اطلاعات کاربر پیدا نشد یا احراز هویت انجام نشده است")]
+        [Description("کاربر منقضی شده است")]
+        UserIsExpired,
+        [Description("اطلاعات کاربر پیدا نشد یا احراز هویت انجام نشده یا ارسال کاربر یا کاربر غیر فعال است")]
         UserNotFound,
-
         [Description("سازمان والد منقضی شده است")]
         ParentOrganizationIsExpired,
-
         [Description("شماره فرستنده معتبر یا فعال نیست، یا قابلیت ارسال از شما گرفته شده است")]
         PrivateNumberNotValid,
-
         [Description("شماره فرستنده غیرفعال است")]
         PrivateNumberIsInactive,
-
         [Description("شماره فرستنده منقضی شده است")]
         PrivateNumberIsExpired,
-
         [Description("سرویس ارسال در دسترس نمی باشد")]
         SystemIsOutOfService,
-
         [Description("خطا در ثبت در صف ارسال")]
         ErrorInScheduledMessagesInsert,
-
         [Description("لیست گیرندگان با توجه به لیست سیاه خالی است")]
         ReceiverListBaseBlackListIsEmpty,
-
         [Description("تعداد گیرندگان با توجه با بخش های پیامک بیشتر از 100 است")]
         RecipientCountNotValid,
-        [Description("متن پیامک خالی است")] MessageBodiesIsEmpty,
-        [Description("ناموفق")] Failed,
-
+        [Description("متن پیامک خالی است")]
+        MessageBodiesIsEmpty,
+        [Description("ناموفق")]
+        Failed,
         [Description("تعداد گیرندگان بیشتر از 100 است")]
         MaxRecipientsIs100,
-        [Description("خطا در ثبت در صف")] ErrorInAddToRabbit,
-        [Description("شروع درخواست")] BeginRequest,
-
+        [Description("خطا در ثبت در صف")]
+        ErrorInAddToRabbit,
+        [Description("شروع درخواست")]
+        BeginRequest,
         [Description("پارامترها با پیام تعریف شده همخوانی ندارد")]
         ParametersNotMatchMessage,
-
         [Description("پارامترهای پیام نامعتبر")]
         ParametersIsNull,
-
         [Description("اطلاعات قالب پیامک احرازهویت یافت نشد")]
         OtpNotFound,
-
         [Description("ارسال قالب پیامک احرازهویت انجام شده است")]
         OtpSent,
-        [Description("توکن خالی است")] TokenIsNull,
-
+        [Description("توکن وارد نشده است")]
+        TokenIsNull,
         [Description("توکن یافت نشد یا اشتباه وارد شده است یا تایید نشده است")]
         TokenNotFound,
-        [Description("آی پی نامعتبر است")] IpIsInvalid,
-
+        [Description("آی پی نامعتبر است")]
+        IpIsInvalid,
         [Description("خطا در حذف بلک لیست ها")]
         RemoveBlackListError,
-
         [Description("تاریخ شروع یا پایان به اشتباه وارد شده است")]
         DatesIsInvalid,
-
         [Description("خطا در چک کردن استثناء ها ")]
         CheckSendSmsExceptionError,
-
         [Description("خطا در دریافت اطلاعات توکن")]
         GetTokenInfoError,
-
         [Description("خط امکان ارسال صوتی را ندارد")]
         PrivateNumberNotSendVoice,
-
         [Description("ارسال رمز یکبار مصرف صوتی انجام شد")]
         VoiceOtpSent,
-
         [Description("کد دلخواه باید حداقل 4 و حداکثر 8 رقم باشد")]
         OptionalCodeLengthInvalid,
-
         [Description("شماره همراه یا ثابت وارد نشده است")]
         NumberIsEmpty,
-
         [Description("شماره فرستنده وارد نشده است")]
         SenderNumberIsEmpty,
-        [Description("خطا در کسر هزینه")] DecreaseSendPriceError,
-
+        [Description("مشکل در کسر هزینه")]
+        DecreaseSendPriceError,
         [Description("خطا در ثبت در صندوق ارسال و حذف از صف")]
         ErrorInsertOutBoxMessageDeleteScheduledMessage,
-        [Description("عنوان وارد نشده است")] TitleIsEmpty,
-        [Description("فایل وارد نشده است")] FileIsEmpty,
-        [Description("فرمت فایل معتبر نیست")] FileFormatNotValid,
-
+        [Description("عنوان وارد نشده است")]
+        TitleIsEmpty,
+        [Description("فایل وارد نشده است")]
+        FileIsEmpty,
+        [Description("فرمت فایل معتبر نیست")]
+        FileFormatNotValid,
         [Description("آپلود فایل صوتی انجام شد")]
         FileUploaded,
-        [Description("فایل صوتی تایید نشده")] VoiceNotAccepted
+        [Description("فایل صوتی تایید نشده")]
+        VoiceNotAccepted
     }
 
     public enum DeliveryStatus

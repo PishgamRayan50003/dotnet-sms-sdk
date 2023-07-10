@@ -22,9 +22,5 @@
         /// آیا ماندگار باشد؟
         /// </summary>
         public bool IsPersist { get; set; } = false;
-        /// <summary>
-        /// شماره همراه که در انتهای صوت اضافه میشود (پیش فرض خالی باشد)
-        /// </summary>
-        public string CallFromCellPhone { get; set; } = string.Empty;
     }
 }

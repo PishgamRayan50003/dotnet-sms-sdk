@@ -179,8 +179,7 @@ namespace PishgamRayan.Sms.Sdk
                     SenderNumber = uploadVoiceMessageRequest.SenderNumber,
                     Title = uploadVoiceMessageRequest.Title,
                     File = uploadVoiceMessageRequest.File,
-                    IsPersist = uploadVoiceMessageRequest.IsPersist,
-                    CallFromCellPhone = uploadVoiceMessageRequest.CallFromCellPhone
+                    IsPersist = uploadVoiceMessageRequest.IsPersist
                 };
 
                 var response = await client.PostAsJsonAsync("Messages/UploadVoiceMessage", uploadVoiceMessage);

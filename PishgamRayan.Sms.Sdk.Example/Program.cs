@@ -32,8 +32,7 @@ namespace PishgamRayan.Sms.Sdk.Example
                 SenderNumber = "913000000",
                 Title = "آپلود صوت جدید با وب سرویس",
                 File = bytes,
-                IsPersist = true,
-                CallFromCellPhone = ""
+                IsPersist = true
             });
             Console.WriteLine($"Uploading voice message response is : {JsonSerializer.Serialize(uploadVoiceMessageResponse)}");
             Console.WriteLine("Press enter to go next api....");
