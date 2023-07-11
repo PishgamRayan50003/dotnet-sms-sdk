@@ -9,9 +9,9 @@ namespace PishgamRayan.Sms.Sdk.Models.UploadVoice
         /// </summary>
         public ApiStatusCode StatusCode { get; set; }
         /// <summary>
-        /// شناسه ارسال
+        /// شناسه صدای آپلود شده در پنل پیامک
         /// </summary>
-        public int MessageId { get; set; }
+        public int VoiceId { get; set; }
         /// <summary>
         /// کد خطاهای آپلود فایل صوتی جدید
         /// </summary>

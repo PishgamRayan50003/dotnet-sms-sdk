@@ -125,7 +125,7 @@ namespace PishgamRayan.Sms.Sdk.Example
             {
                 Token = token,
                 SenderNumber = "913000000",
-                MessageId = 12345678
+                VoiceId = 12345678
             });
             Console.WriteLine($"Get voice status response is : {JsonSerializer.Serialize(getVoiceStatusResponse)}");
             Console.WriteLine("Press enter to go next api....");
@@ -138,7 +138,7 @@ namespace PishgamRayan.Sms.Sdk.Example
                 Token = token,
                 SenderNumber = "913000000",
                 RecipientNumbers = new[] { "09131234567", "03131234567" },
-                VoiceMessageId = 12345678,
+                VoiceId = 12345678,
                 MaxTryCount = 1,
                 MinuteBetweenTries = 2
             });

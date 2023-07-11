@@ -107,7 +107,9 @@ namespace PishgamRayan.Sms.Sdk
         [Description("آپلود فایل صوتی انجام شد")]
         FileUploaded,
         [Description("فایل صوتی تایید نشده")]
-        VoiceNotAccepted
+        VoiceNotAccepted,
+        [Description("شناسه صوتی یافت نشد")]
+        VoiceNotFound
     }
 
     public enum DeliveryStatus

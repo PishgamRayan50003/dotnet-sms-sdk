@@ -11,8 +11,8 @@
         /// </summary>
         public string SenderNumber { get; set; }
         /// <summary>
-        /// شناسه صوت
+        /// شناسه صوت داخل پنل
         /// </summary>
-        public int MessageId { get; set; }
+        public int VoiceId { get; set; }
     }
 }

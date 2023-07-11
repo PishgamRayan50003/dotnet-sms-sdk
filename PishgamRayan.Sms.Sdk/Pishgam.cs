@@ -253,7 +253,7 @@ namespace PishgamRayan.Sms.Sdk
             var body = new GetVoiceStatusRequest
             {
                 SenderNumber = voiceStatusRequest.SenderNumber,
-                MessageId = voiceStatusRequest.MessageId
+                VoiceId = voiceStatusRequest.VoiceId
             };
             var jsonBody = JsonSerializer.Serialize(body);
             request.AddParameter("application/json", jsonBody, ParameterType.RequestBody);
@@ -281,7 +281,7 @@ namespace PishgamRayan.Sms.Sdk
             {
                 SenderNumber = sendVoiceRequest.SenderNumber,
                 RecipientNumbers = sendVoiceRequest.RecipientNumbers,
-                VoiceMessageId = sendVoiceRequest.VoiceMessageId,
+                VoiceId = sendVoiceRequest.VoiceId,
                 MaxTryCount = sendVoiceRequest.MaxTryCount,
                 MinuteBetweenTries = sendVoiceRequest.MinuteBetweenTries
             };

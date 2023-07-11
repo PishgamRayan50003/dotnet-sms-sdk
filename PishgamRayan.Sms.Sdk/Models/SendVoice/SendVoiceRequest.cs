@@ -15,9 +15,9 @@
         /// </summary>
         public string[] RecipientNumbers { get; set; }
         /// <summary>
-        /// شناسه صوت
+        /// شناسه صوت داخل پنل پیامک
         /// </summary>
-        public int VoiceMessageId { get; set; }
+        public int VoiceId { get; set; }
         /// <summary>
         /// چند بار پیام ارسال بشه در صورت موفق نبودن
         /// </summary>
