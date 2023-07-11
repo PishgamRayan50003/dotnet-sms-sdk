@@ -22,6 +22,23 @@ namespace PishgamRayan.Sms.Sdk.Example
             //توکن تایید شده
             const string token = "token";
 
+#if NET48
+            //آپلود فایل صوتی جدید
+            Console.WriteLine("Uploading voice message, please wait ....");
+            var bytes = File.ReadAllBytes("C:\\Voice.mp3");
+            var uploadVoiceMessageResponse = await Pishgam.UploadVoiceMessageNet48(new UploadVoiceMessageRequest
+            {
+                Token = token,
+                SenderNumber = "913000000",
+                Title = "آپلود صوت جدید با وب سرویس",
+                File = bytes,
+                IsPersist = true
+            });
+            Console.WriteLine($"Uploading voice message response is : {JsonSerializer.Serialize(uploadVoiceMessageResponse)}");
+            Console.WriteLine("Press enter to go next api....");
+            Console.ReadLine();
+#endif
+
 #if NET7_0
             //آپلود فایل صوتی جدید
             Console.WriteLine("Uploading voice message, please wait ....");

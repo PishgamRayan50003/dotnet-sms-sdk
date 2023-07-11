@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 #if NET7_0
 using System.Net.Http.Json;
 #endif
@@ -155,9 +156,52 @@ namespace PishgamRayan.Sms.Sdk
 
             return new SendVoiceOtpResponse { StatusCode = ApiStatusCode.Failed };
         }
+
+#if NET48
+        /// <summary>
+        /// میتوان به صورت بایت صدای جدید آپلود کرد
+        /// </summary>
+        /// <param name="uploadVoiceMessageRequest"></param>
+        /// <returns></returns>
+        public static async Task<UploadVoiceMessageResponse> UploadVoiceMessageNet48(UploadVoiceMessageRequest uploadVoiceMessageRequest)
+        {
+            try
+            {
+                var client = new HttpClient
+                {
+                    BaseAddress = new Uri(ApiAddress)
+                };
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", uploadVoiceMessageRequest.Token);
+
+                var uploadVoiceMessage = new StringContent(
+                    JsonSerializer.Serialize(new UploadVoiceMessageRequest
+                    {
+                        SenderNumber = uploadVoiceMessageRequest.SenderNumber,
+                        Title = uploadVoiceMessageRequest.Title,
+                        File = uploadVoiceMessageRequest.File,
+                        IsPersist = uploadVoiceMessageRequest.IsPersist
+                    }),
+                    Encoding.UTF8,
+                    "application/json");
+
+                var response = await client.PostAsync("Messages/UploadVoiceMessage", uploadVoiceMessage);
+                response.EnsureSuccessStatusCode();
+                return JsonSerializer.Deserialize<UploadVoiceMessageResponse>(await response.Content.ReadAsStringAsync());
+
+            }
+            catch
+            {
+                return new UploadVoiceMessageResponse { StatusCode = ApiStatusCode.Failed };
+            }
+
+        }
+#endif
+
 #if NET7_0
         /// <summary>
-        /// میتوان به صورت byte صدای جدید آپلود کرد
+        /// میتوان به صورت بایت صدای جدید آپلود کرد
         /// </summary>
         /// <param name="uploadVoiceMessageRequest"></param>
         /// <returns></returns>
