@@ -109,7 +109,9 @@ namespace PishgamRayan.Sms.Sdk
         [Description("فایل صوتی تایید نشده")]
         VoiceNotAccepted,
         [Description("شناسه صوتی یافت نشد")]
-        VoiceNotFound
+        VoiceNotFound,
+        [Description("حداکثر تلاش باید بزرگتر از صفر باشد")]
+        MaxTryCountMustGreaterZero,
     }
 
     public enum DeliveryStatus

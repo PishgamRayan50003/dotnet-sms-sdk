@@ -19,11 +19,13 @@
         /// </summary>
         public int VoiceId { get; set; }
         /// <summary>
-        /// چند بار پیام ارسال بشه در صورت موفق نبودن
+        /// حداکثر تلاش برای هر شماره
+        /// چند بار پیام ارسال شود در صورت موفق نبودن
         /// </summary>
         public int MaxTryCount { get; set; }
         /// <summary>
-        /// چند دقیقه زنگ را بزنه
+        /// مدت تاخیر بین تلاش ها بر اساس دقیقه
+        /// چند دقیقه یکبار تماس بگیرد؟
         /// </summary>
         public int MinuteBetweenTries { get; set; }
     }
